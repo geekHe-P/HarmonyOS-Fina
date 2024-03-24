@@ -1,0 +1,4 @@
+@Observed
+export class TranInfoModel {
+
+}
