@@ -1,13 +1,19 @@
 import { Card } from '../entity/Card'
-import { CardVewModel } from '../viewModel/CardViewModel';
+import { CardViewModel } from '../viewModel/CardViewModel';
 import { CardModel } from '../model/CardModel';
 
 @Preview
 @Component
 export default struct cardComp {
-  cardModel: CardModel = new CardModel()
-  cardViewModel: CardVewModel = new CardVewModel(this.cardModel)
-  cards: Array<Card> = this.cardViewModel.cards
+  cardModel: CardModel
+  cardViewModel: CardViewModel
+  cards: Array<Card>
+
+  aboutToAppear() {
+    this.cardModel = new CardModel()
+    this.cardViewModel = new CardViewModel(this.cardModel)
+    this.cards = this.cardViewModel.cards
+  }
 
   build() {
     Swiper() {

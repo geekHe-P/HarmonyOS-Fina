@@ -24,13 +24,13 @@ let cardDB: Array<Card> = [
 
 @Observed
 export class CardModel {
-  card: Card
+  private cards: Array<Card>
   // 拿到所有卡片信息
   getALlCard() : Array<Card> {
     // 拿到数据
-    let cards: Array<Card> = cardDB
+    this.cards = cardDB
 
-    return cards
+    return this.cards
   }
 
   // 增加卡片

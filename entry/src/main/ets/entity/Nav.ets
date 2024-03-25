@@ -11,19 +11,19 @@ export class Nav {
   /*
    * 是否被选择
    * */
-  isSelect: boolean
+  isSelect?: boolean
   /*
    * 是否是扫码
    * */
-  qrCode: boolean
+  qrCode?: boolean
   /*
    * 对应的脚标
    * */
-  index: number
+  index?: number
   /*
    * y坐标调整
    * */
-  y: number
+  y?: number
   /*
    * 构造函数赋值
    * */

@@ -2,11 +2,11 @@ import { Card } from '../entity/Card'
 import { CardModel } from '../model/CardModel'
 
 @Observed
-export class CardVewModel {
+export class CardViewModel {
   cards: Array<Card>
 
-  constructor(cards: CardModel) {
-    this.cards = cards.getALlCard()
+  constructor(cardModel: CardModel) {
+    this.cards = cardModel.getALlCard()
     // this.format()
   }
 
